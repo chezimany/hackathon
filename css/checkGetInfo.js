@@ -1,6 +1,5 @@
 
 function test() {
-  //onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false;
   let first_name = document.getElementById("first_name_input").value;
   let last_name = document.getElementById("last_name_input").value;
   let email = document.getElementById("e-mail").value;
@@ -43,40 +42,10 @@ function test() {
     flag=false;
   }
   if(flag){
-    let url = 'mysql://admin:BraveAdmin!@brave-together-hackathon.cjndulutprva.us-east-1.rds.amazonaws.com/main';
-    var request = $.ajax({
-      url: url,
-      method: "POST",
-      data: { first_name: first_name,
-              last_name: last_name,
-              email:email,
-              password:password,
-              cellphone: phone_number},
-      dataType:"json"
-    });
 
-    request.done(function( msg ) {
-      console.log("success");
-      console.log(msg);
-    });
+    document.getElementById("main_form").innerHTML = "";
+    document.getElementById("after_sub").innerHTML = "Thank you for applying."
+    document.getElementById("after_sub2").innerHTML = "A member of our team will contact with you soon :)";
 
-    request.fail(function( jqXHR, textStatus ) {
-      console.log("fail");
-      console.log(textStatus);
-    });
-
-    // alert
-    // let url = 'mysql://admin:BraveAdmin!@brave-together-hackathon.cjndulutprva.us-east-1.rds.amazonaws.com/main/user';
-    // let req = new XMLHttpRequest();
-    //
-    // req.open('POST', url, true);
-    // req.setRequestHeader('Content-Type')
-    // TODO enter to database
-    // document.getElementById("main_form").innerHTML = "";
-    // document.getElementById("after_sub").innerHTML = "Thank you for applying."
-    // document.getElementById("after_sub2").innerHTML = "A member of our team will contact with you soon :)";
   }
-
-
-
 }
