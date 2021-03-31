@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/main.css">
-  <script type="text/javascript" src="css/checkGetInfo.js"></script>
+
   <title> Team XX </title>
     <h1 class="title"> <img class="logo" src="img\logo.png"> Welcome to brave together registration! <img class="logo" src="img\logo.png"></h1>
 </head>
 <body>
-  <form class="form_body" method="get" id="main_form" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+  <form class="form_body" method="get" id="main_form">
     <div id="first_name" class="label_input">
       <label>First Name</label>
       <div class="input">
@@ -60,5 +60,10 @@
   </form>
   <form class="after_sub" id="after_sub2" type="text">
   </form>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="css/checkGetInfo.js"></script>
 </body>
 </html>
